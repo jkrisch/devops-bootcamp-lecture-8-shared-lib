@@ -1,4 +1,4 @@
-def runNpmTests(){
+def call(){
     //install the necessary dependencies              
     sh """
         npm install

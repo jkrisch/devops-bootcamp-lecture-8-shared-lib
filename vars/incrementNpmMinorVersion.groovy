@@ -1,4 +1,4 @@
-def incrementNpmMinorVersion(){
+def call(){
     def old_package_file = readJSON file:'package.json'
     def old_version = "${old_package_file.version}"
     def package_name = "${old_package_file.name}"

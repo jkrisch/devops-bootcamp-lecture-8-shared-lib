@@ -1,4 +1,4 @@
-def commitGitChanges(credentialsId, repoUrl){
+def call(credentialsId, repoUrl){
     withCredentials([string(credentialsId: $credentialsId,variable:'TOKEN')]){
         sh """
         git config --global user.email jenkins@myexample.com
