@@ -1,5 +1,5 @@
 def call(String credentialsId, String repoUrl){
-    withCredentials([string(credentialsId: $credentialsId,variable:'TOKEN')]){
+    withCredentials([string(credentialsId: "${credentialsId}",variable:'TOKEN')]){
         sh """
         git config --global user.email jenkins@myexample.com
         git config --global user.name jenkins
