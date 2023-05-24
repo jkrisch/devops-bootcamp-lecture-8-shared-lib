@@ -1,4 +1,4 @@
-def call(credentialsId, repoUrl){
+def call(String credentialsId, String repoUrl){
     withCredentials([string(credentialsId: $credentialsId,variable:'TOKEN')]){
         sh """
         git config --global user.email jenkins@myexample.com
