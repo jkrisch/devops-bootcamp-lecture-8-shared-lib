@@ -1,6 +1,6 @@
 def call(String credentialsId, String repoUrl){
     withCredentials([string(credentialsId: "${credentialsId}",variable:'TOKEN')]){
-        def newRepoUrl = $repoUrl.replace("https://","https://$TOKEN@")
+        def newRepoUrl = "${repoUrl}".replace("https://","https://${TOKEN}@")
         sh """
         git config --global user.email jenkins@myexample.com
         git config --global user.name jenkins
